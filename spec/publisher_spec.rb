@@ -1,9 +1,9 @@
-require "toolbox/publisher"
+require "tooled/publisher"
 
-describe Toolbox::Publisher do
+describe Tooled::Publisher do
   let(:klass) do
     Class.new do
-      include Toolbox::Publisher
+      include Tooled::Publisher
       publishable_events :foo, :bar
     end
   end
@@ -35,7 +35,7 @@ describe Toolbox::Publisher do
       end
 
       context "with invalid event" do
-        specify { expect { subject.register_subscriber(subscriber, :invalid) }.to raise_error(Toolbox::Publisher::EventMissingException) }
+        specify { expect { subject.register_subscriber(subscriber, :invalid) }.to raise_error(Tooled::Publisher::EventMissingException) }
       end
     end
 
@@ -55,7 +55,7 @@ describe Toolbox::Publisher do
       end
 
       context "with invalid event" do
-        specify { expect { subject.register_subscriber(subscriber, :invalid) }.to raise_error(Toolbox::Publisher::EventMissingException) }
+        specify { expect { subject.register_subscriber(subscriber, :invalid) }.to raise_error(Tooled::Publisher::EventMissingException) }
       end
     end
   end
@@ -64,7 +64,7 @@ describe Toolbox::Publisher do
     let(:subscriber) { double(:subscriber, before_foo: true, after_foo: true, around_foo: true) }
     let(:klass) do
       Class.new do
-        include Toolbox::Publisher
+        include Tooled::Publisher
         publishable_events :foo, :bar
 
         def using_foo
@@ -99,7 +99,7 @@ describe Toolbox::Publisher do
     end
 
     context "having no event" do
-      specify { expect { subject.using_blegga }.to raise_error(Toolbox::Publisher::EventMissingException) }
+      specify { expect { subject.using_blegga }.to raise_error(Tooled::Publisher::EventMissingException) }
     end
   end
 end

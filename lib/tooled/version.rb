@@ -1,3 +1,3 @@
-module Toolbox
+module Tooled
   VERSION = "0.0.2"
 end

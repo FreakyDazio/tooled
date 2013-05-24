@@ -6,4 +6,4 @@ require 'bundler'
 Bundler.require
 
 $:.unshift File.join(Dir.pwd, 'lib')
-require 'toolbox'
+require 'tooled'

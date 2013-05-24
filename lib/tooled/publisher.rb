@@ -5,7 +5,7 @@
 #   and wrap blocks in `with_event` which will then broadcast the event to
 #   any registered subscribers.
 
-module Toolbox
+module Tooled
   module Publisher
 
     ##

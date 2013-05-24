@@ -1,7 +1,7 @@
-require "toolbox/queue"
+require "tooled/queue"
 
-describe Toolbox::Queue do
-  let(:object) { Toolbox::Queue.new }
+describe Tooled::Queue do
+  let(:object) { Tooled::Queue.new }
   subject { object }
 
   describe "adding elements" do

@@ -1,11 +1,11 @@
 # encoding: utf-8
 lib = File.expand_path('../lib', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require 'toolbox/version'
+require 'tooled/version'
 
 Gem::Specification.new do |spec|
-  spec.name          = "toolbox"
-  spec.version       = Toolbox::VERSION
+  spec.name          = "tooled"
+  spec.version       = Tooled::VERSION
   spec.authors       = ["Darren Coxall"]
   spec.email         = ["darren@darrencoxall.com"]
   spec.description   = %q{A simple collection of classes to help avoid over-using Hash}

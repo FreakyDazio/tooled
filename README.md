@@ -1,4 +1,4 @@
-# Toolbox
+# Tooled
 
 Small, tested, independant classes that can be used to help keep ruby code clean and simple by avoiding the over-use of `Hash` and making use of commonly ignored features such as implementing the arithmetic methods (`+`, `-`, `/`, `*`).
 
@@ -8,7 +8,7 @@ I started this gem as I enjoy writting underlying classes and implementing many 
 
 Add this line to your application's Gemfile:
 
-    gem 'toolbox'
+    gem 'tooled'
 
 And then execute:
 
@@ -16,7 +16,7 @@ And then execute:
 
 Or install it yourself as:
 
-    $ gem install toolbox
+    $ gem install tooled
 
 ## Usage
 

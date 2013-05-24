@@ -1,42 +1,42 @@
 ##
-#   Queue provides a first on, first off array
+#   Stack provides a first on, last off array
 
-module Toolbox
-  class Queue
+module Tooled
+  class Stack
     include Enumerable
 
     def initialize
-      @queue_values = []
+      @stack_values = []
     end
 
     def count
-      @queue_values.count
+      @stack_values.count
     end
     alias_method :length, :count
 
     def <<(value)
-      @queue_values << value
+      @stack_values << value
     end
     alias_method :push, :<<
 
     def peek
-      @queue_values.first
+      @stack_values.last
     end
 
     def pop
-      @queue_values.delete_at(0)
+      @stack_values.delete_at(@stack_values.count - 1)
     end
 
     def [](index)
-      @queue_values[index.to_i]
+      @stack_values[@stack_values.count - (index.to_i + 1)]
     end
 
     def to_a
-      @queue_values.reverse.dup
+      @stack_values.dup
     end
 
     def empty?
-      @queue_values.empty?
+      @stack_values.empty?
     end
 
     def each(&block)

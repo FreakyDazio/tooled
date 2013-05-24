@@ -1,7 +1,7 @@
-require "toolbox/vector2d"
+require "tooled/vector2d"
 
-describe Toolbox::Vector2D do
-  let(:object) { Toolbox::Vector2D.new(1, 2) }
+describe Tooled::Vector2D do
+  let(:object) { Tooled::Vector2D.new(1, 2) }
   subject { object }
 
   context "when initialized with values" do
@@ -24,13 +24,13 @@ describe Toolbox::Vector2D do
 
     context "with a vector2d" do
       context "using integer values" do
-        subject { object * Toolbox::Vector2D.new(2, 5) }
+        subject { object * Tooled::Vector2D.new(2, 5) }
         its(:x) { should eql(2.to_f) }
         its(:y) { should eql(10.to_f) }
       end
 
       context "using float values" do
-        subject { object * Toolbox::Vector2D.new(1.5, 2.5) }
+        subject { object * Tooled::Vector2D.new(1.5, 2.5) }
         its(:x) { should eql(1.5.to_f) }
         its(:y) { should eql(5.to_f) }
       end
@@ -38,7 +38,7 @@ describe Toolbox::Vector2D do
   end
 
   describe "when divided" do
-    let(:object) { Toolbox::Vector2D.new(5, 10) }
+    let(:object) { Tooled::Vector2D.new(5, 10) }
     context "with an integer" do
       subject { object / 5 }
       its(:x) { should eql(1.to_f) }
@@ -53,13 +53,13 @@ describe Toolbox::Vector2D do
 
     context "with a vector2d" do
       context "using integer values" do
-        subject { object / Toolbox::Vector2D.new(5, 10) }
+        subject { object / Tooled::Vector2D.new(5, 10) }
         its(:x) { should eql(1.to_f) }
         its(:y) { should eql(1.to_f) }
       end
 
       context "using float values" do
-        subject { object / Toolbox::Vector2D.new(2.5, 1.25) }
+        subject { object / Tooled::Vector2D.new(2.5, 1.25) }
         its(:x) { should eql(2.to_f) }
         its(:y) { should eql(8.to_f) }
       end
@@ -68,7 +68,7 @@ describe Toolbox::Vector2D do
 
   describe "when added" do
     context "with a vector2d" do
-      subject { object + Toolbox::Vector2D.new(1, 5) }
+      subject { object + Tooled::Vector2D.new(1, 5) }
       its(:x) { should eql(2.to_f) }
       its(:y) { should eql(7.to_f) }
     end
@@ -76,7 +76,7 @@ describe Toolbox::Vector2D do
 
   describe "when subtracted" do
     context "with a vector2d" do
-      subject { object - Toolbox::Vector2D.new(1, 5) }
+      subject { object - Tooled::Vector2D.new(1, 5) }
       its(:x) { should eql(0.to_f) }
       its(:y) { should eql(-3.to_f) }
     end

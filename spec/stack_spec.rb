@@ -1,7 +1,7 @@
-require "toolbox/stack"
+require "tooled/stack"
 
-describe Toolbox::Stack do
-  let(:object) { Toolbox::Stack.new }
+describe Tooled::Stack do
+  let(:object) { Tooled::Stack.new }
   subject { object }
 
   describe "adding elements" do

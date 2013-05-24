@@ -1,7 +1,7 @@
-require "toolbox/vector3d"
+require "tooled/vector3d"
 
-describe Toolbox::Vector3D do
-  let(:object) { Toolbox::Vector3D.new(1, 2, 3) }
+describe Tooled::Vector3D do
+  let(:object) { Tooled::Vector3D.new(1, 2, 3) }
   subject { object }
 
   context "when initialized with values" do
@@ -27,14 +27,14 @@ describe Toolbox::Vector3D do
 
     context "with a vector3d" do
       context "using integer values" do
-        subject { object * Toolbox::Vector3D.new(2, 5, 10) }
+        subject { object * Tooled::Vector3D.new(2, 5, 10) }
         its(:x) { should eql(2.to_f) }
         its(:y) { should eql(10.to_f) }
         its(:z) { should eql(30.to_f) }
       end
 
       context "using float values" do
-        subject { object * Toolbox::Vector3D.new(1.5, 2.5, 3.5) }
+        subject { object * Tooled::Vector3D.new(1.5, 2.5, 3.5) }
         its(:x) { should eql(1.5.to_f) }
         its(:y) { should eql(5.to_f) }
         its(:z) { should eql(10.5.to_f) }
@@ -43,7 +43,7 @@ describe Toolbox::Vector3D do
   end
 
   describe "when divided" do
-    let(:object) { Toolbox::Vector3D.new(5, 10, 15) }
+    let(:object) { Tooled::Vector3D.new(5, 10, 15) }
     context "with an integer" do
       subject { object / 5 }
       its(:x) { should eql(1.to_f) }
@@ -60,14 +60,14 @@ describe Toolbox::Vector3D do
 
     context "with a vector3d" do
       context "using integer values" do
-        subject { object / Toolbox::Vector3D.new(5, 10, 15) }
+        subject { object / Tooled::Vector3D.new(5, 10, 15) }
         its(:x) { should eql(1.to_f) }
         its(:y) { should eql(1.to_f) }
         its(:z) { should eql(1.to_f) }
       end
 
       context "using float values" do
-        subject { object / Toolbox::Vector3D.new(2.5, 1.25, 2.5) }
+        subject { object / Tooled::Vector3D.new(2.5, 1.25, 2.5) }
         its(:x) { should eql(2.to_f) }
         its(:y) { should eql(8.to_f) }
         its(:z) { should eql(6.to_f) }
@@ -77,7 +77,7 @@ describe Toolbox::Vector3D do
 
   describe "when added" do
     context "with a vector3d" do
-      subject { object + Toolbox::Vector3D.new(1, 5, 10) }
+      subject { object + Tooled::Vector3D.new(1, 5, 10) }
       its(:x) { should eql(2.to_f) }
       its(:y) { should eql(7.to_f) }
       its(:z) { should eql(13.to_f) }
@@ -86,7 +86,7 @@ describe Toolbox::Vector3D do
 
   describe "when subtracted" do
     context "with a vector3d" do
-      subject { object - Toolbox::Vector3D.new(1, 5, 10) }
+      subject { object - Tooled::Vector3D.new(1, 5, 10) }
       its(:x) { should eql(0.to_f) }
       its(:y) { should eql(-3.to_f) }
       its(:z) { should eql(-7.to_f) }

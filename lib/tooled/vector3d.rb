@@ -3,7 +3,7 @@
 #   co-ordinates and allow them to be manipulated using addition, subtraction,
 #   mulitplication and division.
 
-module Toolbox
+module Tooled
   class Vector3D
     def initialize(x, y, z)
       @axis_values = [nil, nil, nil]
