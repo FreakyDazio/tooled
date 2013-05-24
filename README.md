@@ -1,6 +1,8 @@
 # Toolbox
 
-TODO: Write a gem description
+Small, tested, independant classes that can be used to help keep ruby code clean and simple by avoiding the over-use of `Hash` and making use of commonly ignored features such as implementing the arithmetic methods (`+`, `-`, `/`, `*`).
+
+I started this gem as I enjoy writting underlying classes and implementing many of the libraries I have enjoyed from other languages and tools.
 
 ## Installation
 
@@ -18,7 +20,7 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+Usage is as simple as installing the gem and then using the classes in your own code.
 
 ## Contributing
 
