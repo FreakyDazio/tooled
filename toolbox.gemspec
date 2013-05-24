@@ -8,8 +8,8 @@ Gem::Specification.new do |spec|
   spec.version       = Toolbox::VERSION
   spec.authors       = ["Darren Coxall"]
   spec.email         = ["darren@darrencoxall.com"]
-  spec.description   = %q{TODO: Write a gem description}
-  spec.summary       = %q{TODO: Write a gem summary}
+  spec.description   = %q{A simple collection of classes to help avoid over-using Hash}
+  spec.summary       = %q{A simple collection of classes to help avoid over-using Hash}
   spec.homepage      = ""
   spec.license       = "MIT"
 
