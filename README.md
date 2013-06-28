@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/FreakyDazio/tooled.png)](https://travis-ci.org/FreakyDazio/tooled)
+
 # Tooled
 
 Small, tested, independant classes that can be used to help keep ruby code clean and simple by avoiding the over-use of `Hash` and making use of commonly ignored features such as implementing the arithmetic methods (`+`, `-`, `/`, `*`).
